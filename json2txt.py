@@ -25,5 +25,6 @@ def json2txt(folder_path):
                 x1,x2=float(x1)/8192,float(x2)/8192  #convert coord
                 y1,y2=float(y1)/8192,float(y2)/8192
                 norm_cx,norm_cy =(x1+x2)/2,(y1+y2)/2
-                norm_cx,norm_cy =(x2-x1),(y2-y1)
+                norm_w,norm_h =(x2-x1),(y2-y1)
+                new_txt.write('%d %f %f %f %f\n'%(idx,norm_cx,norm_cy,norm_w,norm_h))
                 
